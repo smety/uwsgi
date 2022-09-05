@@ -108,12 +108,12 @@ retry:
 				break;
 			default:
 				uwsgi_log("unable to set PTHREAD_PRIO_INHERIT\n");
-				exit(1);
+				// exit(1);
 			}
 		}
 		if (pthread_mutexattr_setrobust(&attr, PTHREAD_MUTEX_ROBUST)) {
 			uwsgi_log("unable to make the mutex 'robust'\n");
-			exit(1);
+			// exit(1);
 		}
 	}
 #endif
